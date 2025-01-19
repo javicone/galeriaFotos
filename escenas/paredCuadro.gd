@@ -29,7 +29,7 @@ func getImagenGaleria():
 
 # Función para redimensionar la imagen y ajustar el tamaño del marco
 func ajustaTamañoMarco(ancho_imagen, alto_imagen):
-
+	print(max_dimension)
 	var escala_x = 0 
 	var escala_y = 0
 	# Calcula la relación de aspecto de la imagen

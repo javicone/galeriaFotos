@@ -15,8 +15,9 @@ script = ExtResource("1_lnywo")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 mesh = SubResource("CapsuleMesh_axt1i")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-script = ExtResource("2_41e1p")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_xw28r")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_41e1p")

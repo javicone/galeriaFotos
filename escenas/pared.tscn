@@ -27,6 +27,7 @@ uv1_scale = Vector3(2, 2, 2)
 [node name="pared" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0174832, -0.0187167, -0.0189815)
 script = ExtResource("1_i4nyl")
+max_dimension = 0.5
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
