@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8q722m4ba2gp"]
+
+[ext_resource type="PackedScene" uid="uid://bmhqnfqnfjgy5" path="res://personaje_asset/rigid_character_body_3d-cb734c0556d1d491fa6033bf931e106259b6c1f4/example/example.tscn" id="1_kxn4e"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Example" parent="." instance=ExtResource("1_kxn4e")]

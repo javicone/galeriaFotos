@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://ewbbge7to0it"]
+
+[ext_resource type="Script" path="res://escenas/pantallaCarga.gd" id="1_8xk4k"]
+[ext_resource type="Texture2D" uid="uid://p1biy6kavho3" path="res://textures/imagenes/bg1.jpg" id="2_ma113"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_koo3x"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cnj4a"]
+font_size = 85
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0.027451, 0.027451, 0.027451, 1)
+shadow_offset = Vector2(7.38, 6.945)
+
+[node name="PantallaCarga" type="Node"]
+script = ExtResource("1_8xk4k")
+
+[node name="Bg1" type="Sprite2D" parent="."]
+position = Vector2(582.5, 321.5)
+scale = Vector2(1.18676, 0.967514)
+texture = ExtResource("2_ma113")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open File(s)"
+initial_position = 1
+size = Vector2i(500, 400)
+ok_button_text = "Abrir"
+cancel_button_text = "Cancelar"
+file_mode = 1
+access = 2
+
+[node name="EnterGalery" type="Button" parent="."]
+offset_left = 472.0
+offset_top = 376.0
+offset_right = 641.0
+offset_bottom = 435.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+disabled = true
+text = "Entrar a la galeria
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="LoadFileButton" type="Button" parent="."]
+offset_left = 471.0
+offset_top = 279.0
+offset_right = 641.0
+offset_bottom = 338.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Cargar Imagenes"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="LoadFileButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.322
+anchor_bottom = 1.322
+offset_left = 12.0
+offset_top = -10.998
+offset_right = 155.0
+offset_bottom = 12.002
+label_settings = SubResource("LabelSettings_koo3x")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 87.0
+offset_right = 946.0
+offset_bottom = 203.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Galeria de fotos 3D"
+label_settings = SubResource("LabelSettings_cnj4a")
+
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="files_selected" from="FileDialog" to="." method="_on_file_dialog_files_selected"]
+[connection signal="button_up" from="EnterGalery" to="." method="_on_enter_galery_button_up"]
+[connection signal="button_up" from="LoadFileButton" to="." method="_on_load_file_button_button_up"]
+[connection signal="pressed" from="LoadFileButton" to="." method="_on_load_file_button_pressed"]

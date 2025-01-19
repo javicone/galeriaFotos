@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=3 uid="uid://dijsjrc3yuymi"]
+
+[ext_resource type="PackedScene" uid="uid://cpbt55bfdm80i" path="res://escenas/suelo_marmol.tscn" id="1_aevaq"]
+[ext_resource type="PackedScene" uid="uid://bd05kvg0nrfdb" path="res://escenas/pared.tscn" id="2_xn7ri"]
+[ext_resource type="PackedScene" uid="uid://fr4qk14hmgs8" path="res://escenas/personaje.tscn" id="3_nxpow"]
+[ext_resource type="PackedScene" uid="uid://cbuh1j4mondxn" path="res://assets/potted_plant_02_2k.gltf/potted_plant_02_2k.gltf" id="4_qy8el"]
+
+[node name="escena main" type="Node3D"]
+
+[node name="SueloMarmol" parent="." instance=ExtResource("1_aevaq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.136577, 0, 1.36046)
+
+[node name="pared" parent="." instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.66446, 2.2086, -5.32587)
+
+[node name="pared2" parent="pared" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.00563002, 0.0170727)
+
+[node name="pared2" parent="pared/pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared/pared2/pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="Personaje" parent="." instance=ExtResource("3_nxpow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23226, 2.08469)
+
+[node name="pared2" parent="." instance=ExtResource("2_xn7ri")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.145, 2.22197, 11.0016)
+
+[node name="pared2" parent="pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9835, -0.00563002, 0.0170729)
+
+[node name="pared2" parent="pared2/pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared2/pared2/pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.926947, 0.130968, -0.35159, 0.250197, 0.482542, 0.839377, 0.279589, -0.866025, 0.414524, 0, 4.92289, 6.53545)
+light_energy = 1.282
+light_indirect_energy = 0.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.926135, 0.12941, -0.354299, 0.253188, 0.482963, 0.838238, 0.279589, -0.866026, 0.414524, 0, 4.92289, 6.53545)
+light_energy = 0.561
+light_indirect_energy = 0.0
+
+[node name="pared3" parent="." instance=ExtResource("2_xn7ri")]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 9.67407, 2.22197, -6.81106)
+
+[node name="pared2" parent="pared3" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared3/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared3/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9835, -0.00563002, 0.0170729)
+
+[node name="pared2" parent="pared3/pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="pared2" parent="pared3/pared2/pared2/pared2/pared2" instance=ExtResource("2_xn7ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98349, -0.0056299, 0.017073)
+
+[node name="potted_plant_02_2k" parent="." instance=ExtResource("4_qy8el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.40993, 0, 2.41892)
+
+[node name="potted_plant_02_2k" parent="potted_plant_02_2k" instance=ExtResource("4_qy8el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86833, 0, 0)
+
+[node name="potted_plant_02_2k" parent="potted_plant_02_2k/potted_plant_02_2k" instance=ExtResource("4_qy8el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86833, 0, 0)
+
+[node name="potted_plant_02_2k" parent="potted_plant_02_2k/potted_plant_02_2k/potted_plant_02_2k" instance=ExtResource("4_qy8el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86833, 0, 0)
+
+[node name="potted_plant_02_2k" parent="potted_plant_02_2k/potted_plant_02_2k/potted_plant_02_2k/potted_plant_02_2k" instance=ExtResource("4_qy8el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86833, 0, 0)

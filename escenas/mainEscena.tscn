@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://rx650spne6fq"]
+
+[ext_resource type="Script" path="res://escenas/ControladoEscenas.gd" id="1_j2jmd"]
+[ext_resource type="PackedScene" uid="uid://ewbbge7to0it" path="res://escenas/pantallaCarga.tscn" id="2_jnhyx"]
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_j2jmd")
+
+[node name="PantallaCarga" parent="." instance=ExtResource("2_jnhyx")]
+
+[connection signal="iniciarGaleria" from="PantallaCarga" to="." method="_on_pantalla_carga_iniciar_galeria"]
