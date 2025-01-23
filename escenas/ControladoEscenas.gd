@@ -1,7 +1,7 @@
 extends Node
 
 var pantallaCarga: PackedScene =  preload("res://escenas/pantallaCarga.tscn")
-var escenario: PackedScene = preload("res://escenas/escenario.tscn")
+var escenario: PackedScene = preload("res://escenas/Galeria.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

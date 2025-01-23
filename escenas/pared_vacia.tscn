@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://o7vywhfx75dv"]
+
+[ext_resource type="Material" uid="uid://fj375shaah2d" path="res://materiales/materialPaed.tres" id="1_p8wa6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ynm3g"]
+size = Vector3(1, 1, 0.012207)
+
+[sub_resource type="QuadMesh" id="QuadMesh_nenv0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xtgad"]
+
+[node name="paredVacia" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0582, 0)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.016629)
+shape = SubResource("BoxShape3D_ynm3g")
+
+[node name="PARED" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D"]
+transform = Transform3D(0.999999, -0.00119426, 0.000806867, 0.00119484, 0.999999, -0.000707316, -0.000806007, 0.000708295, 0.999999, 0, 0, 0)
+material_override = ExtResource("1_p8wa6")
+mesh = SubResource("QuadMesh_nenv0")
+
+[node name="RODAPIE" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D"]
+transform = Transform3D(0.998769, -8.52859e-05, 4.04302e-05, 0.00238732, 0.035715, -3.53992e-05, -0.00160919, 5.06281e-05, 0.0250407, 0, -0.487414, 0)
+mesh = SubResource("BoxMesh_xtgad")
+skeleton = NodePath("../PARED")

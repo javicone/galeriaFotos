@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://dijsjrc3yuymi"]
 
-[ext_resource type="PackedScene" uid="uid://cpbt55bfdm80i" path="res://escenas/suelo_marmol.tscn" id="1_aevaq"]
+[ext_resource type="PackedScene" uid="uid://cpbt55bfdm80i" path="res://escenas/Suelo.tscn" id="1_klbdr"]
 [ext_resource type="PackedScene" uid="uid://bd05kvg0nrfdb" path="res://escenas/pared.tscn" id="2_xn7ri"]
 [ext_resource type="PackedScene" uid="uid://fr4qk14hmgs8" path="res://escenas/personaje.tscn" id="3_nxpow"]
 [ext_resource type="PackedScene" uid="uid://cbuh1j4mondxn" path="res://assets/potted_plant_02_2k.gltf/potted_plant_02_2k.gltf" id="4_qy8el"]
 
 [node name="escena main" type="Node3D"]
 
-[node name="SueloMarmol" parent="." instance=ExtResource("1_aevaq")]
+[node name="SueloMarmol" parent="." instance=ExtResource("1_klbdr")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.136577, 0, 1.36046)
 
 [node name="pared" parent="." instance=ExtResource("2_xn7ri")]

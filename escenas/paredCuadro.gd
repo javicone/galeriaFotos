@@ -1,5 +1,5 @@
 extends Node3D
-@export var max_dimension: float = 0 # 1x1 en unidades 3D
+@export var max_dimension: float = 0.5 # 1x1 en unidades 3D
 var imagen: Image
 @onready var cuadro = $StaticBody3D/CollisionShape3D/cuadro
 

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c63ik3mof7oni"]
+
+[ext_resource type="Script" path="res://escenas/Galeria.gd" id="1_gnsq5"]
+[ext_resource type="PackedScene" uid="uid://fr4qk14hmgs8" path="res://escenas/personaje.tscn" id="2_ckxye"]
+[ext_resource type="PackedScene" uid="uid://cpbt55bfdm80i" path="res://escenas/Suelo.tscn" id="3_dn7jp"]
+[ext_resource type="PackedScene" uid="uid://o7vywhfx75dv" path="res://escenas/pared_vacia.tscn" id="5_oexuy"]
+
+[node name="Galeria" type="Node3D"]
+script = ExtResource("1_gnsq5")
+
+[node name="Personaje" parent="." instance=ExtResource("2_ckxye")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0100427, 1, -0.0115528)
+
+[node name="Suelo" parent="." instance=ExtResource("3_dn7jp")]
+transform = Transform3D(1, -0.000136822, 0.000129175, 0.000136894, 1, -0.000581154, -0.000129099, 0.000581171, 1, 0, 0, 0)
+
+[node name="paredVacia" parent="." instance=ExtResource("5_oexuy")]
+transform = Transform3D(-0.000975672, -0.00194691, 1.00831, 0.000253955, 1.00823, 0.00194727, -1.07504, 0.000239939, -0.000914643, -2, 2, 0)
+
+[node name="paredVacia2" parent="." instance=ExtResource("5_oexuy")]
+transform = Transform3D(-0.99783, 0, -8.7233e-08, 0, 0.99783, 0, 8.7233e-08, 0, -0.99783, 0, 2, 2)
+
+[node name="paredVacia3" parent="." instance=ExtResource("5_oexuy")]
+transform = Transform3D(1.08844, -0.00197102, 0.000987787, 0.00210203, 1.02071, -0.00025712, -0.000987283, 0.00024291, 1.08844, 0, 2, -2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.331267, 0.877248, 0.347415, 0.930132, 0.241774, 0.276404, 0.158479, 0.414706, -0.896049, 3.82775, 7.423, -11.8419)
+editor_only = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.0599634, 0.585676, 0.808324, 0.961094, 0.184864, -0.20524, -0.269634, 0.789183, -0.551804, 3.82775, 7.423, -11.8419)
+editor_only = true

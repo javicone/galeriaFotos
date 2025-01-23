@@ -1,6 +1,5 @@
 extends Camera3D
 
-
 @export var sensitivity: float = 0.2
 var x_rotation: float
 var y_rotation: float
