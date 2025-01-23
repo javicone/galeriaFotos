@@ -1,10 +1,13 @@
 extends Node3D
 @export var max_dimension: float = 0.5 # 1x1 en unidades 3D
 var imagen: Image
-@onready var cuadro = $StaticBody3D/CollisionShape3D/cuadro
+@onready var cuadro = $StaticBody3D/cuadro
+
+
 
 # This will be called when the node enters the scene
 func _ready():
+	max_dimension = 0.5
 	getImagenGaleria()  # Llama directamente a la función para obtener y mostrar la imagen
 
 # Función para obtener y mostrar la imagen

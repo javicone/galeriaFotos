@@ -8,7 +8,7 @@ signal iniciarGaleria()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	file_dialog.current_dir = "/"
+	file_dialog.current_dir = "/users/javiv/Downloads/imagenesPrueba"
 	#iniciarGaleria.emit()
 	#QUITAR CUANDO ESTE ACABADO.
 

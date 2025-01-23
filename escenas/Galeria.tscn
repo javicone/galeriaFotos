@@ -12,21 +12,24 @@ script = ExtResource("1_gnsq5")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0100427, 1, -0.0115528)
 
 [node name="Suelo" parent="." instance=ExtResource("3_dn7jp")]
-transform = Transform3D(1, -0.000136822, 0.000129175, 0.000136894, 1, -0.000581154, -0.000129099, 0.000581171, 1, 0, 0, 0)
+transform = Transform3D(1, -0.000136822, 0.000129175, 0.000136894, 1, -0.000581154, -0.000129099, 0.000581171, 1, 0, 0, -2)
 
 [node name="paredVacia" parent="." instance=ExtResource("5_oexuy")]
-transform = Transform3D(-0.000975672, -0.00194691, 1.00831, 0.000253955, 1.00823, 0.00194727, -1.07504, 0.000239939, -0.000914643, -2, 2, 0)
+transform = Transform3D(-0.000975672, -0.00194691, 1.00831, 0.000253955, 1.00823, 0.00194727, -1.07504, 0.000239939, -0.000914643, -2, 2, -2)
 
 [node name="paredVacia2" parent="." instance=ExtResource("5_oexuy")]
-transform = Transform3D(-0.99783, 0, -8.7233e-08, 0, 0.99783, 0, 8.7233e-08, 0, -0.99783, 0, 2, 2)
+transform = Transform3D(-0.99783, 0, -8.7233e-08, 0, 0.99783, 0, 8.7233e-08, 0, -0.99783, 0, 2, 4)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="paredVacia2"]
+transform = Transform3D(1.00217, 0, 0, 0, 1.00217, 0, 0, 0, 1.00217, 0, 2, 4)
+light_energy = 2.018
+omni_range = 7.0
 
 [node name="paredVacia3" parent="." instance=ExtResource("5_oexuy")]
-transform = Transform3D(1.08844, -0.00197102, 0.000987787, 0.00210203, 1.02071, -0.00025712, -0.000987283, 0.00024291, 1.08844, 0, 2, -2)
+transform = Transform3D(1.08844, 0, 0, 0, 1.02071, 0, 0, 0, 1.08844, 0, 2, -4)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.331267, 0.877248, 0.347415, 0.930132, 0.241774, 0.276404, 0.158479, 0.414706, -0.896049, 3.82775, 7.423, -11.8419)
-editor_only = true
+[node name="Suelo2" parent="." instance=ExtResource("3_dn7jp")]
+transform = Transform3D(1, -0.000273569, 0.000258429, 0.000273863, 1, -0.00116229, -0.000258118, 0.00116236, 1, 0, 0, 2)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
-transform = Transform3D(0.0599634, 0.585676, 0.808324, 0.961094, 0.184864, -0.20524, -0.269634, 0.789183, -0.551804, 3.82775, 7.423, -11.8419)
-editor_only = true
+[node name="paredVacia4" parent="." instance=ExtResource("5_oexuy")]
+transform = Transform3D(-5.05142e-08, 0, 1.01677, 0, 1.01653, 0, -1.15563, 0, -4.44444e-08, -2, 2, 2)

@@ -8,9 +8,9 @@ size = Vector3(1, 1, 0.012207)
 
 [sub_resource type="QuadMesh" id="QuadMesh_ym0pb"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fdgy3"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_wvje8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fdgy3"]
 
 [node name="pared" type="Node3D"]
 transform = Transform3D(1.05133, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -23,11 +23,6 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.016629)
 shape = SubResource("BoxShape3D_q7q5m")
 
-[node name="cuadro" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(0.647997, -0.0011725, 0.00161455, 0.00154889, 0.490998, -0.0014137, -0.00104404, 0.000696018, 0.999998, 0.0196553, -0.001075, 0.00672772)
-mesh = SubResource("QuadMesh_ym0pb")
-surface_material_override/0 = SubResource("ShaderMaterial_fdgy3")
-
 [node name="PARED" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
 transform = Transform3D(0.999999, -0.00119426, 0.000806867, 0.00119484, 0.999999, -0.000707316, -0.000806007, 0.000708295, 0.999999, 0, 0, 0)
 material_override = ExtResource("2_dkcfj")
@@ -37,3 +32,9 @@ mesh = SubResource("QuadMesh_ym0pb")
 transform = Transform3D(0.998769, -8.52859e-05, 4.04302e-05, 0.00238732, 0.035715, -3.53992e-05, -0.00160919, 5.06281e-05, 0.0250407, 0, -0.487414, 0)
 mesh = SubResource("BoxMesh_wvje8")
 skeleton = NodePath("../PARED")
+
+[node name="cuadro" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.647997, -0.0011725, 0.00161455, 0.00154889, 0.490998, -0.0014137, -0.00104404, 0.000696018, 0.999998, 0.0196553, -0.001075, -0.00990128)
+mesh = SubResource("QuadMesh_ym0pb")
+skeleton = NodePath("../CollisionShape3D")
+surface_material_override/0 = SubResource("ShaderMaterial_fdgy3")
