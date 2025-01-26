@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c63ik3mof7oni"]
+[gd_scene load_steps=7 format=3 uid="uid://c63ik3mof7oni"]
 
 [ext_resource type="Script" path="res://escenas/Galeria.gd" id="1_gnsq5"]
 [ext_resource type="PackedScene" uid="uid://fr4qk14hmgs8" path="res://escenas/personaje.tscn" id="2_ckxye"]
 [ext_resource type="PackedScene" uid="uid://cpbt55bfdm80i" path="res://escenas/Suelo.tscn" id="3_dn7jp"]
+[ext_resource type="PackedScene" uid="uid://cbuh1j4mondxn" path="res://assets/potted_plant_02_2k.gltf/potted_plant_02_2k.gltf" id="5_fy4s8"]
 [ext_resource type="PackedScene" uid="uid://o7vywhfx75dv" path="res://escenas/pared_vacia.tscn" id="5_oexuy"]
+[ext_resource type="PackedScene" uid="uid://d2prkguhwcoiq" path="res://escenas/techoEscena.tscn" id="6_wn511"]
 
 [node name="Galeria" type="Node3D"]
 script = ExtResource("1_gnsq5")
@@ -21,7 +23,7 @@ transform = Transform3D(-0.000975672, -0.00194691, 1.00831, 0.000253955, 1.00823
 transform = Transform3D(-0.99783, 0, -8.7233e-08, 0, 0.99783, 0, 8.7233e-08, 0, -0.99783, 0, 2, 4)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="paredVacia2"]
-transform = Transform3D(1.00217, 0, 0, 0, 1.00217, 0, 0, 0, 1.00217, 0, 2, 4)
+transform = Transform3D(1.00217, 0, 7.10543e-15, 0, 1.00217, 0, -7.10543e-15, 0, 1.00217, 0, 0.715515, 4)
 light_energy = 2.018
 omni_range = 7.0
 
@@ -33,3 +35,9 @@ transform = Transform3D(1, -0.000273569, 0.000258429, 0.000273863, 1, -0.0011622
 
 [node name="paredVacia4" parent="." instance=ExtResource("5_oexuy")]
 transform = Transform3D(-5.05142e-08, 0, 1.01677, 0, 1.01653, 0, -1.15563, 0, -4.44444e-08, -2, 2, 2)
+
+[node name="potted_plant_02_2k" parent="." instance=ExtResource("5_fy4s8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61195, -0.0153178, 3.65274)
+
+[node name="Node3D" parent="." instance=ExtResource("6_wn511")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.12936, 3.9215, 0.0558639)
