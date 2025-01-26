@@ -1,20 +1,51 @@
-[gd_scene load_steps=16 format=3 uid="uid://d2prkguhwcoiq"]
+[gd_scene load_steps=22 format=3 uid="uid://d2prkguhwcoiq"]
 
-[ext_resource type="Texture2D" uid="uid://kdgh42hjq6co" path="res://textures/wood_planks_dirt_1k/LaTexturaRotada.jpg" id="1_am3pa"]
-[ext_resource type="Texture2D" uid="uid://3o67ppstpwec" path="res://textures/wood_planks_dirt_1k/textures/wood_planks_dirt_rough_1k.png" id="2_5gfs7"]
+[ext_resource type="Texture2D" uid="uid://cqkcrrklpx1bu" path="res://textures/textua_madea/textures/wood_table_worn_diff_1k.png" id="1_4eq0s"]
+[ext_resource type="Texture2D" uid="uid://jdbeo5x2ig60" path="res://textures/textua_madea/textures/wood_table_worn_diff_1k.jpg" id="2_21w80"]
 [ext_resource type="Texture2D" uid="uid://c4kh0532llmml" path="res://textures/textura_Vigas/rotadaVigasText.jpg" id="3_fu7wc"]
-[ext_resource type="Shader" path="res://escenas/techoEscena.gdshader" id="4_lnosy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_358s5"]
+albedo_texture = ExtResource("1_4eq0s")
+uv1_scale = Vector3(8, 0.3, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wp0ca"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiyda"]
-albedo_texture = ExtResource("1_am3pa")
+[sub_resource type="QuadMesh" id="QuadMesh_158u4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2igsw"]
+albedo_texture = ExtResource("1_4eq0s")
 uv1_scale = Vector3(8, 0.3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42q64"]
+albedo_texture = ExtResource("1_4eq0s")
+uv1_scale = Vector3(8, 0.3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6vi2"]
+albedo_texture = ExtResource("2_21w80")
+uv1_scale = Vector3(8, 0.3, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_boamo"]
+load_path = "res://.godot/imported/LaTexturaRotada.jpg-71eb72ad9c9705ea644803a1ed479e95.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiyda"]
+albedo_texture = SubResource("CompressedTexture2D_boamo")
+uv1_scale = Vector3(8, 0.3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0a70"]
+albedo_texture = ExtResource("1_4eq0s")
+uv1_scale = Vector3(8, 0.3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x27x4"]
+albedo_texture = ExtResource("1_4eq0s")
+uv1_scale = Vector3(8, 0.3, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_05ero"]
+load_path = "res://.godot/imported/wood_planks_dirt_rough_1k.png-d33caa3e97c1b9f31d271a5f1b6009d0.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4uxy5"]
 render_priority = 1
-albedo_texture = ExtResource("1_am3pa")
-roughness_texture = ExtResource("2_5gfs7")
+albedo_texture = ExtResource("1_4eq0s")
+roughness_texture = SubResource("CompressedTexture2D_05ero")
 roughness_texture_channel = 3
 normal_enabled = true
 ao_enabled = true
@@ -23,20 +54,14 @@ uv1_triplanar_sharpness = 5.85634
 uv2_scale = Vector3(0, 0, 0)
 texture_filter = 4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ito3"]
-albedo_texture = ExtResource("3_fu7wc")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_eg1gj"]
-render_priority = 0
-next_pass = SubResource("StandardMaterial3D_1ito3")
-shader = ExtResource("4_lnosy")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t82f7"]
+albedo_texture = ExtResource("1_4eq0s")
+uv1_scale = Vector3(8, 0.3, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjmte"]
 albedo_texture = ExtResource("3_fu7wc")
 uv1_scale = Vector3(8, 1, 1)
 uv1_triplanar = true
-
-[sub_resource type="QuadMesh" id="QuadMesh_158u4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sli2f"]
 albedo_texture = ExtResource("3_fu7wc")
@@ -51,39 +76,14 @@ albedo_texture = ExtResource("3_fu7wc")
 uv1_scale = Vector3(1, 2, 1)
 
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="Viga de madera" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-4.13527, 0.15, 0, -2.3875, -0.259808, 0, 0, 0, 0.3, -2.07942, 1.04823, 2)
+transform = Transform3D(-4.13527, 0.15, 0, -2.3875, -0.259808, 0, 0, 0, 0.3, -2.079, 1.048, 1.34)
+material_override = SubResource("StandardMaterial3D_358s5")
 mesh = SubResource("BoxMesh_wp0ca")
-surface_material_override/0 = SubResource("StandardMaterial3D_wiyda")
-
-[node name="Viga de madera3" type="MeshInstance3D" parent="StaticBody3D/Viga de madera"]
-transform = Transform3D(1, 0, 0, -2.27374e-13, 1, 0, 0, 0, 1, 0, 0, 5)
-mesh = SubResource("BoxMesh_wp0ca")
-surface_material_override/0 = SubResource("StandardMaterial3D_4uxy5")
-
-[node name="Viga de madera4" type="MeshInstance3D" parent="StaticBody3D/Viga de madera"]
-transform = Transform3D(1, 0, 0, -2.27374e-13, 1, 0, 0, 0, 1, 0, 0, -5)
-mesh = SubResource("BoxMesh_wp0ca")
-surface_material_override/0 = SubResource("ShaderMaterial_eg1gj")
-
-[node name="Viga de madera2" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(-4.13527, -0.15, 0, 2.3875, -0.259808, 0, 0, 0, 0.3, 2.02509, 1.08097, 2)
-mesh = SubResource("BoxMesh_wp0ca")
-surface_material_override/0 = SubResource("StandardMaterial3D_wiyda")
-
-[node name="Viga de madera3" type="MeshInstance3D" parent="StaticBody3D/Viga de madera2"]
-transform = Transform3D(1, 0, 0, -2.27374e-13, 1, 0, 0, 0, 1, 0, 0, 5)
-mesh = SubResource("BoxMesh_wp0ca")
-surface_material_override/0 = SubResource("StandardMaterial3D_4uxy5")
-
-[node name="Viga de madera4" type="MeshInstance3D" parent="StaticBody3D/Viga de madera2"]
-transform = Transform3D(1, 0, 0, -2.27374e-13, 1, 0, 0, 0, 1, 0, 0, -5)
-mesh = SubResource("BoxMesh_wp0ca")
-surface_material_override/0 = SubResource("StandardMaterial3D_bjmte")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(8, 0, 0, 0, -1.74846e-07, -1, 0, 4, -4.37114e-08, 0, 0, 2.0161)
@@ -92,18 +92,49 @@ mesh = SubResource("QuadMesh_158u4")
 
 [node name="Viga de madera5" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-1.74846e-07, 0, 0.3, 0, 0.3, 0, -4, 0, -1.31134e-08, 9.68722e-08, 2.15609, 1.90475)
+material_override = SubResource("StandardMaterial3D_2igsw")
 mesh = SubResource("BoxMesh_wp0ca")
 skeleton = NodePath("../Viga de madera")
+
+[node name="Viga de madera3" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.13527, 0.15, -5.32907e-15, -2.3875, -0.259808, -5.02684e-15, -4.26326e-14, 8.88178e-16, 0.3, -2.077, 1.048, 2.67)
+material_override = SubResource("StandardMaterial3D_42q64")
+mesh = SubResource("BoxMesh_wp0ca")
+skeleton = NodePath("../Viga de madera")
+
+[node name="Viga de madera2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.13527, -0.15, 0, 2.3875, -0.259808, 0, 0, 0, 0.3, 2.025, 1.081, 1.33)
+material_override = SubResource("StandardMaterial3D_x6vi2")
+mesh = SubResource("BoxMesh_wp0ca")
+surface_material_override/0 = SubResource("StandardMaterial3D_wiyda")
+
+[node name="Viga de madera4" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.13527, 0.15, -8.88178e-15, -2.3875, -0.259808, -7.60887e-15, -5.68434e-14, 3.10862e-15, 0.3, -2.079, 1.048, 0)
+material_override = SubResource("StandardMaterial3D_k0a70")
+mesh = SubResource("BoxMesh_wp0ca")
+skeleton = NodePath("../Viga de madera")
+
+[node name="Viga de madera6" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.13527, -0.15, -2.66454e-15, 2.3875, -0.259808, 2.97493e-15, -4.26326e-14, 0, 0.3, 2.03493, 1.081, 2.67)
+material_override = SubResource("StandardMaterial3D_x27x4")
+mesh = SubResource("BoxMesh_wp0ca")
+skeleton = NodePath("../Viga de madera2")
+surface_material_override/0 = SubResource("StandardMaterial3D_4uxy5")
+
+[node name="Viga de madera7" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-4.13527, -0.15, -1.77636e-15, 2.3875, -0.259808, 2.4448e-15, -4.26326e-14, -4.44089e-16, 0.3, 2.025, 1.081, 1.19209e-07)
+material_override = SubResource("StandardMaterial3D_t82f7")
+mesh = SubResource("BoxMesh_wp0ca")
+skeleton = NodePath("../Viga de madera2")
 surface_material_override/0 = SubResource("StandardMaterial3D_bjmte")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-2.10877, 0.45, 0, -1.2175, -0.779423, 0, 0, 0, 1.95, -1.89854, 1.16934, 1.90861)
+transform = Transform3D(-2.10877, 0.45, 0, -1.2175, -0.779423, 0, 0, 0, 2, -1.91271, 1.16934, 1.90861)
 material_override = SubResource("StandardMaterial3D_sli2f")
 mesh = SubResource("PlaneMesh_kqioo")
 surface_material_override/0 = SubResource("StandardMaterial3D_bsdyn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(0.5, 0.320092, 0, -2.34308, 0.5, 0, 0, 0, 1, -1.3633, 2.12955, 0)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.10877, -0.45, 0, 1.2175, -0.779423, 0, 0, 0, 2, 1.93464, 1.16934, 1.90861)
 material_override = SubResource("StandardMaterial3D_ygwiw")
 mesh = SubResource("PlaneMesh_kqioo")
-skeleton = NodePath("../..")

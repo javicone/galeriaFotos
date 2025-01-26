@@ -20,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.016629)
 shape = SubResource("BoxShape3D_ynm3g")
 
 [node name="PARED" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D"]
-transform = Transform3D(0.999999, -0.00119426, 0.000806867, 0.00119484, 0.999999, -0.000707316, -0.000806007, 0.000708295, 0.999999, 0, 0, 0)
+transform = Transform3D(1.00014, -0.00202792, 0.000806784, 0.00119501, 1.69804, -0.000707271, -0.000806123, 0.00120272, 0.999914, 0, 0.354178, 0)
 material_override = ExtResource("1_p8wa6")
 mesh = SubResource("QuadMesh_nenv0")
 
