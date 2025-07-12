@@ -46,9 +46,3 @@ Una aplicación 3D en Godot donde:
 - 📁 Carga de archivos locales
 
 ---
-
-## 📁 Cómo usarlo
-
-1. 🔽 **Clona el repo**:
-   ```bash
-   git clone https://github.com/tu-usuario/galeria-arte-godot.git
