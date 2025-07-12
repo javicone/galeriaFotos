@@ -1,31 +1,54 @@
-# 🖼️ Galería de Arte Personal en Godot
+# 🎨 Galería de Arte Generativa en Godot
 
-Este es un proyecto experimental creado con **Godot Engine** con el objetivo de aprender desarrollo de videojuegos y experiencias interactivas. La aplicación permite al usuario cargar sus propias imágenes y genera automáticamente una galería de arte interactiva en 3D, adaptando el tamaño de los cuadros al tamaño de cada imagen.
+¡Bienvenido a tu propia exposición virtual!  
+Este es un proyecto creado para aprender **Godot Engine**, donde podrás generar automáticamente una galería 3D con tus propias imágenes. 🖼️✨
 
-## 🎯 Objetivo
+> 📷 Tú traes las fotos.  
+> 🧠 Godot se encarga del resto.  
+> 🏛️ El resultado: una galería dinámica adaptada a tus imágenes.
 
-Aprender a utilizar Godot mientras desarrollo una experiencia inmersiva donde el usuario puede:
+---
 
-- Cargar sus propias fotos o imágenes.
-- Visualizarlas en una galería generada dinámicamente.
-- Navegar por el espacio 3D y disfrutar de su propia exposición virtual.
+## 🧩 ¿Qué es esto?
 
-## 🚀 Características
+Una aplicación 3D en Godot donde:
 
-- 🖼️ Soporte para múltiples imágenes personalizadas.
-- 📐 Escalado automático de los cuadros según el tamaño de las imágenes.
-- 🧱 Generación dinámica de la galería.
-- 🕹️ Control de cámara para explorar el espacio como si fuera un museo.
-- 🔄 Posibilidad de actualizar la galería fácilmente con nuevas imágenes.
+✅ El usuario coloca imágenes en una carpeta.  
+✅ El sistema las analiza y las convierte en cuadros.  
+✅ La galería se genera en tiempo real, con proporciones ajustadas al tamaño de cada imagen.  
+✅ Puedes recorrerla en primera persona, como si estuvieras en un museo virtual privado.
+
+---
+
+## 🕹️ Controles
+
+| Acción            | Tecla / Botón       |
+|-------------------|---------------------|
+| Moverse           | WASD / Flechas      |
+| Mirar alrededor   | Ratón               |
+| Salir del juego   | Esc                 |
+
+---
+
+## ✨ Características
+
+- 🔍 **Autoajuste de tamaño**: Cada imagen genera un cuadro proporcional.
+- 🏗️ **Galería modular**: Se construye dinámicamente.
+- 🧭 **Exploración libre**: Recorre tu galería como en un videojuego.
+- 🔄 **Fácil actualización**: Solo reemplaza las imágenes.
+
+---
 
 ## 🛠️ Tecnologías
 
-- [Godot Engine](https://godotengine.org/) (versión 4.x)
-- GDScript
-- Importación dinámica de archivos locales (en desarrollo)
+- 🎮 Godot Engine (v4.x)
+- 📜 GDScript
+- 📁 Carga de archivos locales
 
-## 📦 Instalación
+---
 
-1. Clona este repositorio:
+## 📁 Cómo usarlo
+
+1. 🔽 **Clona el repo**:
    ```bash
    git clone https://github.com/tu-usuario/galeria-arte-godot.git
